@@ -1,5 +1,6 @@
 mod kafka;
 mod grafana;
+mod config;
 
 use log::{info};
 
