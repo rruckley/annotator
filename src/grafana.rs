@@ -1,6 +1,6 @@
 // Interact with Grafan to create annotations
 
-use log::{info};
+use log::{info,debug};
 use crate::config::Config;
 use crate::annotation::Annotation;
 
@@ -15,8 +15,9 @@ impl GrafanaClient {
         Self {}
     }
 
-    pub fn annotate(annotation : Annotation) -> Result<String,String> {
+    pub fn annotate(&self,_annotation : Annotation) -> Result<String,String> {
         // Create supplied annotation in Grafana
-        Err("Not implemented".to_owned())
+        debug!("Creating annotation in Grafana");
+        Err("Create not implemention}".to_owned())
     }
 }
