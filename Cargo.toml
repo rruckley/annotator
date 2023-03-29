@@ -11,6 +11,7 @@ description = "Create annotations in Grafana based on alerts in Kafka topic"
 [dependencies]
 env_logger = "0.10.0"
 kafka = "0.9.0"
+log = "0.4.17"
 reqwest = {version = "0.11.16", features = ["rustls-tls"]}
 serde = "1.0.159"
 tokio = "1.27.0"

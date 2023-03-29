@@ -23,6 +23,7 @@ version = "0.1.0"
 dependencies = [
  "env_logger",
  "kafka",
+ "log",
  "reqwest",
  "serde",
  "tokio",
