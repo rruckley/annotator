@@ -1,7 +1,8 @@
+#[macro_use]
+extern crate env_logger;
 
 mod kafka;
 mod grafana;
-
 
 fn main() {
     env_logger::init();
