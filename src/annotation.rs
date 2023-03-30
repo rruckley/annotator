@@ -2,12 +2,12 @@
 use crate::event::Event;
 
 pub struct Annotation {
-    dashboard_id : Option<u32>,
-    panel_id : Option<u32>,
-    time : u64,
-    time_end : u64,
-    tags : Vec<String>,
-    text : String,
+    pub dashboard_id : Option<u32>,
+    pub panel_id : Option<u32>,
+    pub time : u64,
+    pub time_end : u64,
+    pub tags : Vec<String>,
+    pub text : String,
 }
 
 impl From<Event> for Annotation {
@@ -20,7 +20,7 @@ impl From<Event> for Annotation {
             time_end : 0,
             tags : vec![
                 "host=test".to_owned(),
-                "cust=test".to_owned()
+                "cust=test".to_owned(),
             ]
         }
     }
