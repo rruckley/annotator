@@ -5,7 +5,7 @@ mod annotation;
 mod event;
 mod correlate;
 
-use log::{info,error};
+use log::{info,debug,error};
 use annotation::Annotation;
 use correlate::Correlate;
 
@@ -18,10 +18,17 @@ fn main() {
     let correlator = Correlate::new(grafana_client.clone());
 
     let event = kafka_client.get();
-    let annotation = Annotation::from(event);
-    match grafana_client.annotate(annotation) {
-        Ok(r) => info!("Annotation worked: {r}"),
-        Err(e) => error!("Annotation failure: {e}"),
+    let panel = correlator.find_panel(&event);
+
+    match panel {
+        Some(p) => {
+            debug!("Found a panel")
+        },
+        None => {
+            debug!("No panel found");
+        }
     }
+    //let annotation = Annotation::from(event);
+  
     
 }
