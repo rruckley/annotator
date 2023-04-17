@@ -13,5 +13,6 @@ env_logger = "0.10.0"
 kafka = "0.9.0"
 log = "0.4.17"
 reqwest = {version = "0.11.16", features = ["rustls-tls"]}
+rustls = "0.21.0"
 serde = "1.0.159"
 tokio = "1.27.0"
