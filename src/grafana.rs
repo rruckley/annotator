@@ -4,8 +4,13 @@ use log::{info,debug};
 use crate::config::Config;
 use crate::annotation::Annotation;
 
+#[derive(Clone)]
 pub struct GrafanaClient {
+}
 
+pub struct GrafanaPanel {
+    pub dashboard : String,
+    pub panel : Option<String>,
 }
 
 impl GrafanaClient {
@@ -18,6 +23,10 @@ impl GrafanaClient {
     pub fn annotate(&self,_annotation : Annotation) -> Result<String,String> {
         // Create supplied annotation in Grafana
         debug!("Creating annotation in Grafana");
-        Err("Create not implemention}".to_owned())
+        Err("Create not implemeted".to_owned())
+    }
+
+    pub fn get_org_by_name(&self,org_name : String) -> Option<String> {
+        None
     }
 }
