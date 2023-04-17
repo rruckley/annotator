@@ -1,5 +1,7 @@
 // Standard event payload
+use crate::grafana::GrafanaPanel;
 
+#[derive(Clone)]
 pub struct Event {
     pub id : String,
     source : String,
@@ -9,11 +11,16 @@ pub struct Event {
     start_time : String,
     finish_time : Option<String>,
     message : String,
-    customer : String,
+    pub customer : String,
     customer_uid : Option<u16>,
-    service : String,
+    pub service : String,
     pub ticket_number : Option<String>,
     details : Option<String>,
+}
+
+pub struct EnrichedEvent {
+    pub event : Event,
+    pub panel : GrafanaPanel,
 }
 
 impl std::default::Default for Event {
