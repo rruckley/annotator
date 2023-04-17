@@ -27,6 +27,7 @@ impl GrafanaClient {
     }
 
     pub fn get_org_by_name(&self,org_name : String) -> Option<String> {
-        None
+
+        Some("5".to_string())
     }
 }
