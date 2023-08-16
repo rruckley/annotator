@@ -1,2 +1,2 @@
 # annotator
-Reads from Kafka topic and creates annocations within Grafana
+Reads from Kafka topic and creates annotations within Grafana
